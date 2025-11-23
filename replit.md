@@ -4,9 +4,39 @@
 
 PDF Tools is a modern web application built with Next.js that provides free online PDF processing tools. The application offers three core features: converting images to PDF, merging multiple PDFs, and compressing PDFs with quality control. The application is fully bilingual, supporting both German (default) and English languages, and features a responsive design that works across desktop, tablet, and mobile devices.
 
+## Recent Changes
+
+### November 23, 2025 - Replit Environment Setup
+- Imported GitHub repository and configured for Replit environment
+- Created `.gitignore` file with Next.js-specific ignores
+- Updated `next.config.js` to allow iframe embedding for Replit's proxy (X-Frame-Options: ALLOWALL)
+- Installed all dependencies via npm
+- Configured Frontend Server workflow to run on port 5000 with host 0.0.0.0
+- Moved blog markdown files to correct location (`content/blog/`)
+- Configured deployment as autoscale with build and start commands
+- Verified frontend loads correctly and displays German homepage
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+
+## Replit Environment Configuration
+
+**Development Setup**:
+- Port: 5000 (frontend only)
+- Host: 0.0.0.0 (required for Replit's network accessibility)
+- Workflow: "Frontend Server" runs `npm run dev`
+- Next.js configured to allow iframe embedding for Replit proxy
+
+**Backend Integration**:
+- Backend API not included in this repository
+- Expected at `http://localhost:8000` by default (can be overridden with NEXT_PUBLIC_BACKEND_URL)
+- Note: PDF processing features require a separate backend service to be running
+
+**Deployment**:
+- Deployment target: autoscale (stateless Next.js app)
+- Build command: `npm run build`
+- Start command: `npm start` (production server on port 5000)
 
 ## System Architecture
 
