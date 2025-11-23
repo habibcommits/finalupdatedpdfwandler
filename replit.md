@@ -29,9 +29,13 @@ Preferred communication style: Simple, everyday language.
 - Next.js configured to allow iframe embedding for Replit proxy
 
 **Backend Integration**:
-- Backend API not included in this repository
-- Expected at `http://localhost:8000` by default (can be overridden with NEXT_PUBLIC_BACKEND_URL)
-- Note: PDF processing features require a separate backend service to be running
+- Backend API URL: https://newpdfbackend-cadethabib10.replit.app
+- Environment variable: NEXT_PUBLIC_BACKEND_URL (set in shared environment)
+- Backend endpoints:
+  - `/api/image-to-pdf` - Convert images to PDF
+  - `/api/merge-pdf` - Merge multiple PDFs
+  - `/api/compress-pdf` - Compress PDF with quality controls (dpi, image_quality, color_mode)
+- Health check: `/health` endpoint confirms backend is operational
 
 **Deployment**:
 - Deployment target: autoscale (stateless Next.js app)
